@@ -5,7 +5,7 @@
       <h1 class="title">
         {{ res }}
       </h1>
-      <Child fromParent="message"></Child>
+      <Child fromParent="message" number="10"></Child>
       <h2 class="subtitle">
         My luminous Nuxt.js project
       </h2>
@@ -30,11 +30,6 @@ import Logo from "~/components/Logo.vue";
 import Child from "~/components/Child.vue";
 
 export default {
-  date() {
-    return {
-      message: "aaaaa"
-    };
-  },
   components: {
     Logo,
     Child
