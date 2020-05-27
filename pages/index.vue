@@ -5,6 +5,7 @@
       <h1 class="title">
         {{ res }}
       </h1>
+      <Child fromParent="message"></Child>
       <h2 class="subtitle">
         My luminous Nuxt.js project
       </h2>
@@ -26,10 +27,17 @@
 
 <script>
 import Logo from "~/components/Logo.vue";
+import Child from "~/components/Child.vue";
 
 export default {
+  date() {
+    return {
+      message: "aaaaa"
+    };
+  },
   components: {
-    Logo
+    Logo,
+    Child
   },
   async asyncData({ $axios }) {
     const url = "http://localhost:10080/api";
