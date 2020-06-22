@@ -34,7 +34,9 @@ export default {
   async asyncData({ $axios }) {
     const url = "http://localhost:10080/api";
     const res = await $axios.$get(url);
-    return { res };
+    return { 
+      res: res
+    };
   }
 };
 </script>
