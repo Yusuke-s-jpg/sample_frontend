@@ -6,7 +6,7 @@
         {{ res }}
       </h1>
       <h2 class="subtitle">
-        My luminous Nuxt.js project
+        My luminous Nuxt.js TodoApp project
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
