@@ -5,8 +5,9 @@
       <h1 class="title">
         {{ res }}
       </h1>
+      <Child fromParent="message" number="10"></Child>
       <h2 class="subtitle">
-        My luminous Nuxt.js project
+        My luminous Nuxt.js TodoApp project
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
@@ -26,15 +27,19 @@
 
 <script>
 import Logo from "~/components/Logo.vue";
+import Child from "~/components/Child.vue";
 
 export default {
   components: {
-    Logo
+    Logo,
+    Child
   },
   async asyncData({ $axios }) {
     const url = "http://localhost:10080/api";
     const res = await $axios.$get(url);
-    return { res };
+    return { 
+      res: res
+    };
   }
 };
 </script>
