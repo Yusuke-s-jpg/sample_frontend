@@ -1,7 +1,12 @@
 <template>
   <div class="container">
-    <div>
-      <ArticleCards />
+    <div class="article-card-list">
+      <ArticleCards
+        v-for="article in articles"
+        :key="article.id"
+        class="article-card"
+        :article="article"
+      />
     </div>
   </div>
 </template>
@@ -14,11 +19,10 @@ export default {
     ArticleCards
   },
   async asyncData({ $axios }) {
-    const url = "http://localhost:10080/api/articles";
-    const res = await $axios.$get(url);
-    console.log(res[0].title);
+    const res = await $axios.$get("http://localhost:10080/api/articles");
+    console.log(res);
     return {
-      res: res[0].title
+      articles: res
     };
   }
 };
