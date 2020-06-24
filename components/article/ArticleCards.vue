@@ -1,5 +1,5 @@
 <template>
-  <el-card class="box-card">
+  <el-card class="article-card">
     <div slot="header" class="clearfix">
       <span>{{ article.title }}</span>
       <el-button style="float: right; padding: 3px 0" type="text"
@@ -41,7 +41,7 @@ export default {
   clear: both;
 }
 
-.box-card {
-  width: 480px;
+.article-card {
+  width: 50%;
 }
 </style>
