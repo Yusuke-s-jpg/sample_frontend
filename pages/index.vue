@@ -37,4 +37,8 @@ export default {
   flex-wrap: wrap;
   padding: 50px;
 }
+
+.article-card {
+  margin: 15px;
+}
 </style>

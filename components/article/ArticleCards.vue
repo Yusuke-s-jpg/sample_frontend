@@ -2,13 +2,9 @@
   <el-card class="article-card">
     <div slot="header" class="clearfix">
       <span>{{ article.title }}</span>
-      <el-button style="float: right; padding: 3px 0" type="text"
-        >Operation button</el-button
-      >
+      <el-button style="float: right; padding: 3px 0" type="text">Operation button</el-button>
     </div>
-    <div class="text item">
-      {{ article.body }}
-    </div>
+    <div class="text item">{{ article.body }}</div>
   </el-card>
 </template>
 
@@ -42,6 +38,6 @@ export default {
 }
 
 .article-card {
-  width: 50%;
+  width: 40%;
 }
 </style>
