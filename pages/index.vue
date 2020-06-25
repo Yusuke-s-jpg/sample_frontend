@@ -1,8 +1,11 @@
 <template>
   <div class="container">
-    <div>
-      <ArticleCards />
-    </div>
+    <ArticleCards
+      v-for="article in articles"
+      :key="article.id"
+      class="article-card"
+      :article="article"
+    />
   </div>
 </template>
 
@@ -14,11 +17,10 @@ export default {
     ArticleCards
   },
   async asyncData({ $axios }) {
-    const url = "http://localhost:10080/api/articles";
-    const res = await $axios.$get(url);
-    console.log(res[0].title);
+    const res = await $axios.$get("http://localhost:10080/api/articles");
+    console.log(res);
     return {
-      res: res[0].title
+      articles: res
     };
   }
 };
@@ -32,27 +34,11 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
+  padding: 50px;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.article-card {
+  margin: 15px;
 }
 </style>

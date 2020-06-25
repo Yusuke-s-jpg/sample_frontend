@@ -1,16 +1,23 @@
 <template>
-  <el-card class="box-card">
+  <el-card class="article-card">
     <div slot="header" class="clearfix">
-      <span>Card name</span>
-      <el-button style="float: right; padding: 3px 0" type="text"
-        >Operation button</el-button
-      >
+      <span>{{ article.title }}</span>
+      <el-button style="float: right; padding: 3px 0" type="text">Operation button</el-button>
     </div>
-    <div v-for="o in 4" :key="o" class="text item">
-      {{ "List item " + o }}
-    </div>
+    <div class="text item">{{ article.body }}</div>
   </el-card>
 </template>
+
+<script>
+export default {
+  props: {
+    article: {
+      type: Object,
+      required: true
+    }
+  }
+};
+</script>
 
 <style>
 .text {
@@ -30,7 +37,7 @@
   clear: both;
 }
 
-.box-card {
-  width: 480px;
+.article-card {
+  width: 40%;
 }
 </style>
