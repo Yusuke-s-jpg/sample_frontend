@@ -1,9 +1,9 @@
 <template>
-  <div>   
+  <div>
     <nav>
       <ul>
         <li>
-          <nuxt-link to="/">TODOAPP</nuxt-link>
+          <nuxt-link to="/">タスク管理</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -11,9 +11,7 @@
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>>
 
 <style scoped>
