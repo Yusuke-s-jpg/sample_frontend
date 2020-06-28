@@ -6,13 +6,13 @@
           <nuxt-link to="/">タスク管理</nuxt-link>
         </li>
         <li>
-          <button @click="show=true">
+          <button @click="show = true">
             <p>モーダル表示</p>
           </button>
         </li>
       </ul>
     </nav>
-    <Modal @closeModal="show=false" v-if="show" />
+    <Modal @closeModal="show = false" v-if="show" />
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
     };
   }
 };
-</script>>
+</script>
 
 <style scoped>
 ul {
