@@ -2,7 +2,7 @@
   <div class="modal">
     <div class="modal-wrap">
       <div class="modal-form-wrap">
-        <h2 style="text-align: center; margin-bottom: 20px;">{{ title }}</h2>
+        <h2 style="text-align: center; margin-bottom: 15px;">{{ title }}</h2>
         <el-form ref="form" :model="form" label-width="80px">
           <el-form-item label="タイトル">
             <el-input v-model="form.name"></el-input>
