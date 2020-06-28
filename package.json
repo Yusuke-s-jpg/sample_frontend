@@ -14,7 +14,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.10.3",
     "element-ui": "^2.13.2",
-    "nuxt": "^2.0.0"
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^8.0.2"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
