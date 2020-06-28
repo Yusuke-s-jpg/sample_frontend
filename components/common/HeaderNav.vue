@@ -10,7 +10,7 @@
         </li>
       </ul>
     </nav>
-    <Modal @closeModal="show = false" v-if="show" />
+    <Modal @closeModal="show = false" v-if="show" title="タスク作成" />
   </div>
 </template>
 

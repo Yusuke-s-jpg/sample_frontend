@@ -2,7 +2,8 @@
   <div class="modal">
     <div class="modal-wrap">
       <div class="modal-form-wrap">
-        <el-form ref="form" :model="form" label-width="120px">
+        <h2 style="text-align: center; margin-bottom: 25px;">{{ title }}</h2>
+        <el-form ref="form" :model="form" label-width="80px">
           <el-form-item label="タイトル">
             <el-input v-model="form.name"></el-input>
           </el-form-item>
@@ -29,6 +30,12 @@ export default {
       }
     };
   },
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
   methods: {
     onSubmit() {
       console.log("submit!");
@@ -52,7 +59,7 @@ export default {
       position: fixed;
       top: 30%;
       left: 25%;
-      padding: 60px;
+      padding: 25px 60px;
       height: 40%;
       width: 50%;
     }
