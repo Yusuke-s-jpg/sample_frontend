@@ -6,9 +6,7 @@
           <nuxt-link to="/">タスク管理</nuxt-link>
         </li>
         <li>
-          <button @click="show = true">
-            <p>モーダル表示</p>
-          </button>
+          <p @click="show = true" class="new">タスク作成</p>
         </li>
       </ul>
     </nav>
@@ -39,5 +37,10 @@ li {
 }
 a {
   color: aliceblue;
+}
+.new {
+  margin-left: 15px;
+  color: aliceblue;
+  cursor: pointer;
 }
 </style>
