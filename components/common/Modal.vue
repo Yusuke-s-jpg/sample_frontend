@@ -55,7 +55,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     .modal-form-wrap {
-      background-color: aliceblue;
+      background-color: #fff;
       position: fixed;
       top: 30%;
       left: 25%;
