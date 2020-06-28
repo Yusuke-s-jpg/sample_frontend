@@ -1,33 +1,68 @@
 <template>
   <div class="modal">
     <div class="modal-wrap">
-      // このボタンを押すとカスタムイベントcloseModalが発生
-      <button @click="$emit('closeModal')">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
-          />
-        </svg>
-        <p>ここを押せば閉じる</p>
-      </button>
+      <div class="modal-form-wrap">
+        <h2 style="text-align: center; margin-bottom: 25px;">{{ title }}</h2>
+        <el-form ref="form" :model="form" label-width="80px">
+          <el-form-item label="タイトル">
+            <el-input v-model="form.name"></el-input>
+          </el-form-item>
+          <el-form-item label="内容">
+            <el-input type="textarea" v-model="form.desc"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="onSubmit">Create</el-button>
+            <el-button @click="$emit('closeModal')">Cancel</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        desc: ""
+      }
+    };
+  },
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    onSubmit() {
+      console.log("submit!");
+    }
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .modal {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   .modal-wrap {
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
+    .modal-form-wrap {
+      background-color: aliceblue;
+      position: fixed;
+      top: 30%;
+      left: 25%;
+      padding: 25px 60px;
+      height: 40%;
+      width: 50%;
+    }
   }
 }
 </style>
