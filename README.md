@@ -20,3 +20,10 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## DB Setup
+
+```bash
+docker-compose exec app php artisan migrate:fresh
+docker-compose exec app php artisan db:seed
+```
